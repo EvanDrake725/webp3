@@ -12,7 +12,6 @@ const Games = () => {
   const [showNintendo, setShowNintendo] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Fetch the initial 20 games when the page loads
   useEffect(() => {
     fetchGames();
   }, []);
@@ -32,7 +31,6 @@ const Games = () => {
     }
   };
 
-  // Search the API for a specific game
   const searchGame = async () => {
     const search = searchTerm.trim();
 
@@ -64,7 +62,6 @@ const Games = () => {
     }
   };
 
-  // Filter games by developer
   const filteredGames = showNintendo
     ? games.filter((game) =>
         (game.developer || "")
